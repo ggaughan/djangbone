@@ -113,7 +113,7 @@ dispatch() method to do this as follows::
 
         @method_decorator(login_required)
         def dispatch(self, request, *args, **kwargs):
-            return super(WidgetView, self).dispatch(*args, **kwargs)
+            return super(WidgetView, self).dispatch(request, *args, **kwargs)
 
 
 You might also want to vary the base_queryset depending on the request (or an
